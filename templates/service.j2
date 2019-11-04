@@ -122,6 +122,9 @@ StandardError={{ systemd_service_Service_StandardError }}
 {% if systemd_service_Service_SyslogIdentifier is defined %}
 SyslogIdentifier={{ systemd_service_Service_SyslogIdentifier }}
 {% endif -%}
+{% if systemd_service_Service_SyslogFacility is defined %}
+SyslogFacility={{ systemd_service_Service_SyslogFacility }}
+{% endif -%}
 
 [Install]
 {% if systemd_service_Install_WantedBy is defined %}
